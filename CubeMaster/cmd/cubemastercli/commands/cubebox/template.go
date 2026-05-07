@@ -1324,9 +1324,9 @@ func parseContainerOverrides(c *cli.Context) (*types.ContainerOverrides, error) 
 					Host: &host,
 				},
 			},
-			TimeoutMs:        30000,
+			TimeoutMs:        120000,
 			PeriodMs:         500,
-			FailureThreshold: 60,
+			FailureThreshold: 240,
 			SuccessThreshold: 1,
 		}
 	}
