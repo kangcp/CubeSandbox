@@ -2,8 +2,7 @@ FROM cube-sandbox-image.tencentcloudcr.com/opensource/openresty:1.21.4.1-6-alpin
 
 LABEL maintainer="staryxchen <staryxchen@tencent.com>"
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencentyun.com/g' /etc/apk/repositories \
-    && mkdir -p /data/log/cube-proxy/ \
+RUN mkdir -p /data/log/cube-proxy/ \
     && apk update \
     && apk add --no-cache tzdata curl wget \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
